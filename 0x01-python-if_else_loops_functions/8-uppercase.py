@@ -5,8 +5,6 @@ def uppercase(str):
       print("{:c}".format(number), end="")
     elif str[i] >= 'A' and str[i] <= 'Z':
       print("{:c}".format(ord(str[i])), end="")
-    if str[i] == ' ':
-      print(" ", end="")
     if str[i] <= '9':
       print("{}".format(str[i]),end="")
   print()
