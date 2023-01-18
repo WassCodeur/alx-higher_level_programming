@@ -1,0 +1,19 @@
+Test 0-add_integer.py
+---------------------
+
+>>> add_integer(1, 2)
+3
+>>> add_integer(100, 200)
+300
+>>> add_integer(1.5, 2.5)
+4
+>>> add_integer(1.5, 2)
+
+When 2 arguments positives/negatives int/float
+-----------------------------------------------
+>>> add_integer(1, -2)
+-1
+>>> add_integer(-1, 2)
+1
+>>> add_integer(-1, -2)
+-3
