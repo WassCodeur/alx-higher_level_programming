@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+"""
+function that reads a text file
+"""
+
+
 def write_file(filename="", text=""):
     """write_file function
 
