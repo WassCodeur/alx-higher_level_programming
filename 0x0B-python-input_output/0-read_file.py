@@ -1,8 +1,10 @@
 #!/usr/bin/python3
-def write_file(filename="", text=""):
-    """Write a string to a text file (UTF8) and return the number of characters written
+def read_file(filename=""):
+    """This function read a text file and print it to sdtout
     args:
         filename: name of the file
-        text: string to write to the file
-    return: number of characters written
+    return: text file content
     """
+    with open(filename, mode="r", encoding='utf-8' ) as myfile:
+        content = myfile.read()
+    print(content)
