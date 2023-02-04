@@ -1,11 +1,12 @@
 #!/usr/bin/python3
-"""import json"""
-import json
+"""function that returns the dictionary description with simple data structure
+"""
+
+
 def class_to_json(obj):
-    """That function convert a class to json
-        args: obj
-        returs: json
+  """module class_to_json
+       returns builds a dictionary
     """
+
     to_dict = obj.__dict__
-    to_json = json.dumps(to_dict)
     return to_dict
