@@ -11,5 +11,4 @@ def class_to_json(obj):
   
     """
     to_dict = obj.__dict__
-    to_json = json.dumps(to_dict)
     return to_dict
