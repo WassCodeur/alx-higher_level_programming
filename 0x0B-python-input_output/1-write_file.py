@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-"""
-function that reads a text file
+"""function that reads a text file
+
 """
 
 
@@ -19,6 +19,6 @@ def write_file(filename="", text=""):
     return: number of characters written
 
     """
-    with open(filename, mode="w") as myfile:
+    with open(filename, mode="w", encoding='utf-8') as myfile:
         myfile.write(text)
     return len(text)
