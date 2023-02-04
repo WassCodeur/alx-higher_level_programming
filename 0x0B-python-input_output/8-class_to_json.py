@@ -5,7 +5,9 @@
 
 def class_to_json(obj):
   """module class_to_json
+ 
        returns builds a dictionary
+
     """
 
     to_dict = obj.__dict__
