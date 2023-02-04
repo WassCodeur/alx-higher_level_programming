@@ -4,9 +4,7 @@
 
 def class_to_json(obj):
     """That function convert a class to json
- 
         args: obj
-
         returs: json
 
     """
