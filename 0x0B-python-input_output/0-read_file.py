@@ -1,10 +1,12 @@
 #!/usr/bin/python3
+"""
+function that reads a text file
+"""
+
+
 def read_file(filename=""):
-    """This function read a text file and print it to sdtout
-    args:
-        filename: name of the file
-    return: text file content
+    """reads a text file (UTF8) and prints it to stdout
+    Returns none
     """
-    with open(filename, mode="r", encoding='utf-8' ) as myfile:
-        content = myfile.read()
-    print(content)
+    with open(filename, "r", encoding="utf-8") as f:
+        print(f.read(), end="")
