@@ -10,11 +10,9 @@ def write_file(filename="", text=""):
         the number of characters written 
         If the file does not exist, it will be created. 
         If the file already exists, its contents will be overwritten.
-
     args:
         filename: name of the file
         text: text to write
-
     return: number of characters written
 
     """
