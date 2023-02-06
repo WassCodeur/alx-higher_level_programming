@@ -1,11 +1,13 @@
 #!/usr/bin/python3
-"""The rectangle Module
+"""Class Rectangle
 """
-from models import Base
+from models.base import Base
 
 
 class Rectangle(Base):
-    """My class Rectangle
+    """Defining the Rectangle class
+        Inherits from:
+            Base
     """
 
     def __init__(self, width, height, x=0, y=0, id=None):
@@ -25,6 +27,7 @@ class Rectangle(Base):
     def width(self, value):
         """Setting private attribute
         """
+        self.setter_validation("width", value)
         self.__width = value
 
     @property
@@ -43,22 +46,23 @@ class Rectangle(Base):
     def x(self):
         """Returning private attribute
         """
-        return self._x
+        return self.__x
 
     @x.setter
     def x(self, value):
         """Setting private attribute
         """
-        self._x = value
+        self.setter_validation("x", value)
+        self.__x = value
 
     @property
     def y(self):
         """Returning private attribute
         """
-        return self._y
+        return self.__y
 
     @y.setter
     def y(self, value):
         """Setting private attribute
         """
-        self._y = value
+        self.__y = value
