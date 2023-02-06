@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Class Rectangle
+"""contains class Rectangle which implements Base.
 """
 from models.base import Base
 
