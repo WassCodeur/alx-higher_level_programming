@@ -44,6 +44,7 @@ class Rectangle(Base):
         """Returning private attribute
         """
         return self._x
+
     @x.setter
     def x(self, value):
         """Setting private attribute
@@ -55,6 +56,7 @@ class Rectangle(Base):
         """Returning private attribute
         """
         return self._y
+
     @y.setter
     def y(self, value):
         """Setting private attribute
