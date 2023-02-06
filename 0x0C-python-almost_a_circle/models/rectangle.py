@@ -2,7 +2,7 @@
 """
     contains class Rectangle which implements Base.
 """
-from models.base import Base
+from base import Base
 
 
 class Rectangle(Base):
@@ -119,3 +119,7 @@ class Rectangle(Base):
             for j in range(self.__width):
                 print("#", end="")
             print()
+
+    def __str__(self):
+        """method  returns [Rectangle] (<id>) <x>/<y> - <width>/<height>"""
+        return f"[Rectangle] ({self.id}) {self.x}/{self.y} - {self.width}/{self.height}"
