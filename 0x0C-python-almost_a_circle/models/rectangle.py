@@ -111,4 +111,4 @@ class Rectangle(Base):
 
     def area(self):
         """the public method"""
-        return self.x * self.y
+        return self.__width * self.__height
