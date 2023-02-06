@@ -112,3 +112,10 @@ class Rectangle(Base):
     def area(self):
         """the public method"""
         return self.__width * self.__height
+
+    def display(self):
+        """ the public method that prints in stdout the Rectangle"""
+        for i in range(self.__height):
+            for j in range(self.__width):
+                print("#", end="")
+            print()
