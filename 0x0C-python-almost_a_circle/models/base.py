@@ -2,6 +2,7 @@
 """Base Model Module
 """
 
+
 class Base:
     """My class Base
     """
