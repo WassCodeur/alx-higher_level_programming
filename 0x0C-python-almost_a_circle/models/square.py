@@ -21,8 +21,9 @@ class Square(Rectangle):
         self.y = y
 
     def __str__(self):
-        """module string represation of square
         """
-        return "[{}] ({}) {}/{} - {}".format(type(self).__name__, self.id,
-                                                    self.x, self.y,
-                                                    self.size)
+            Overloading str function
+        """
+        return "[{}] ({}) {}/{} - {}".format(type(self).__name__,
+                                             self.id, self.x, self.y,
+                                             self.size)
