@@ -142,16 +142,7 @@ class Rectangle(Base):
                     self.y = arg
         elif kwargs:
             for key, value in kwargs:
-                if key == "id":
-                    self.id = value
-                elif key == "width":
-                    self.width = value
-                elif key == "height":
-                    self.height = value
-                elif key == "x":
-                    self.x = value
-                elif key == "y":
-                    self.y = value
+               self.__setattr__(key, value)
 
     def __str__(self):
         """
