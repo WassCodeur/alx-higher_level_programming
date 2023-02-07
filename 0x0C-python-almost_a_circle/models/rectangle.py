@@ -9,7 +9,7 @@ class Rectangle(Base):
     """
         class Rectangle implements Base.
         Methods:
-            __init__()
+         __init__()
     """
     def __init__(self, width, height, x=0, y=0, id=None):
         """
