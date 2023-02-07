@@ -141,7 +141,7 @@ class Rectangle(Base):
                 elif i == 4:
                     self.y = arg
         elif kwargs:
-            for key, value in kwargs.iteritems():
+            for key, value in kwargs.items():
                 if key == "id":
                     self.id = value
                 elif key == "width":
