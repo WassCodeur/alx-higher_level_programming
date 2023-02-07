@@ -115,13 +115,11 @@ class Rectangle(Base):
 
     def display(self):
         """ the public method that prints in stdout the Rectangle"""
+        for y in range(self.__y):
+            print()
         for i in range(self.__height):
-            if self.__x >= self.__y:
-                for y in range(self.__x):
-                    print(end=" ")
-            elif self.__y > self.__x:
-                for y in range(self.__x):
-                    print(end=" ")
+            for y in range(self.__x):
+                print(end=" ")
             for j in range(self.__width):
                 print("#", end="")
             print()
