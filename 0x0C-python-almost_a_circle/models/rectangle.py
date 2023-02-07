@@ -115,8 +115,8 @@ class Rectangle(Base):
 
     def display(self):
         """ the public method that prints in stdout the Rectangle"""
-        for y in range(self.__y):
-            print()
+        rectangle = ""
+        print("\n" * self.y, end="")
         for i in range(self.__height):
             for y in range(self.__x):
                 print(end=" ")
