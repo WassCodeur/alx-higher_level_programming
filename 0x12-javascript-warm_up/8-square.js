@@ -1,12 +1,16 @@
 #!/usr/bin/node   
-
-import { argv } from 'node:process';
-if ( argv[2] === undefined ) {
-  console.log('Missing number of occurrences');
+const arg = process.argv[2];
+if ( arg === undefined || isNaN(arg)) {
+  console.log('Missing size');
 } else {
     let x = 0;
-    while ( x < argv[2]) {
-      console.log('C is fun');
+    let line = '';
+    while ( x < arg) {
+	for(let j = 0; j < arg; j++ ) {
+	    line += 'x';
+	}
+	console.log(line);
+	line = '';
       x++;
     }
 }
