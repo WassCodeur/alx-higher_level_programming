@@ -1,14 +1,11 @@
 #!/usr/bin/node
-class Rectangle {
+module.exports = class Rectangle {
     width;
     height;
     constructor (w, h) {
-	this.width = w;
-	this.h = h;
-	if ( w === 0 || h === 0 ) {
-	    emptyObjct = {};
-	    retrun emptyObjct;
+	if (w > 0 && h > 0) {
+    this.width = w;
+	    this.height = h;
 	}
-    }
-}
-module.exports = Rectangle;
+  }
+};
