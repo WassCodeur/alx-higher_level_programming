@@ -7,4 +7,3 @@ if (argc === 0) {
 } else {
   console.log('Arguments found');
 }
-
