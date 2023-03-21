@@ -14,3 +14,5 @@ cur.execute("SELECT * FROM states ORDER BY states.id ASC")
 states = cur.fetchall()
 for stat in states:
     print(stat)
+cur.close()
+conn.close()
