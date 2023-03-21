@@ -11,7 +11,10 @@ if __name__ == "__main__":
                            passwd=sys.argv[2],
                            db=sys.argv[3])
     cur = conn.cursor()
-    cur.execute("SELECT id, name FROM states ORDER BY id ASC")
+    cur.execute("SELECT id, name FROM states\
+                WHERE name = \'{}\'\
+                ORDER BY id ASC"
+                .format(sys.argv[4]))
     states = cur.fetchall()
     for stat in states:
         if stat[1] == sys.argv[4]:
