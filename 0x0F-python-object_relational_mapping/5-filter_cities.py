@@ -20,7 +20,7 @@ if __name__ == "__main__":
     to_list = list(cities)
     length = (len(to_list) -1)
     for i in range(length):
-        print(to_list[i], end=", ")
-    print(to_list[length])
+        print(to_list[i][0], end=", ")
+    print(to_list[length][0])
     cur.close()
     conn.close()
