@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""myql module"""
+"""mysql module"""
 import MySQLdb
 import sys
 
@@ -13,15 +13,12 @@ if __name__ == "__main__":
                            db=sys.argv[3])
     cur = conn.cursor()
     cur.execute("SELECT DISTINCT cities.name\
-                FROM cities\
-                JOIN states ON cities.state_id = states.id\
-                WHERE states.name = \'{}\'\
-                ".format(state))
+                 FROM cities\
+                 JOIN states ON cities.state_id = states.id\
+                 WHERE states.name = %s", (state,))
     cities = cur.fetchall()
-    list_cities = list(cities)
-    length = (len(list_cities) - 1)
-    for i in length:
-        print(list_cities[i], end=", ")
-    print(list_cities[length])
+    for city, in cities:
+        print(city, end=", ")
+    print() # Print a new line after the last city
     cur.close()
     conn.close()
