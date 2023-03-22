@@ -18,7 +18,9 @@ if __name__ == "__main__":
                  WHERE states.name = %s", (state,))
     cities = cur.fetchall()
     for city, in cities:
-        print(city, end=", ")
+        print(city, end="")
+        if city:
+            print(end=", ")
     print() # Print a new line after the last city
     cur.close()
     conn.close()
