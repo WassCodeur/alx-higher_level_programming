@@ -19,7 +19,7 @@ if __name__ == "__main__":
                 ".format(state))
     cities = cur.fetchall()
     list_cities = list(cities)
-    length = len(cities - 1)
+    length = (len(list_cities) - 1)
     for i in length:
         print(list_cities[i], end=", ")
     print(list_cities[length])
