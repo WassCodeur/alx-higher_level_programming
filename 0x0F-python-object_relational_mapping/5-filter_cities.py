@@ -18,9 +18,10 @@ if __name__ == "__main__":
                 WHERE states.name = \'{}\'\
                 ".format(state))
     cities = cur.fetchall()
+    list_cities = list(cities)
     length = len(cities - 1)
     for i in length:
-        print(cities[i], end=", ")
-    print(cities[length])
+        print(list_cities[i], end=", ")
+    print(list_cities[length])
     cur.close()
     conn.close()
