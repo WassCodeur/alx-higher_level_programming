@@ -18,10 +18,8 @@ if __name__ == "__main__":
                 WHERE states.name = \'{}\'\
                 ORDER BY cities.id ASC".format(state))
     cities = cur.fetchall()
-    length = (len(cities) - 1)
-    for i in length:
-        print(cities[i], end=", ")
-    print(cities[length], end="")
+    for citie in cities:
+        print(citie, end="")
     print()
     cur.close()
     conn.close()
