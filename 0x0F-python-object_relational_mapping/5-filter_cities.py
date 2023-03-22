@@ -16,10 +16,11 @@ if __name__ == "__main__":
                 FROM cities\
                 JOIN states ON cities.state_id = states.id\
                 WHERE states.name = \'{}\'\
-                ORDER BY cities.id ASC".format(state))
+                ".format(state))
     cities = cur.fetchall()
-    for citie in cities:
-        print(citie, end=" ")
-    print()
+    length = len(cities - 1)
+    for i in length:
+        print(cities[i], end=", ")
+    print(cities[length])
     cur.close()
     conn.close()
