@@ -17,11 +17,6 @@ if __name__ == "__main__":
                  JOIN states ON cities.state_id = states.id\
                  WHERE states.name = %s", (state,))
     cities = cur.fetchall()
-    num_cities = len(cities)
-    for i, (city,) in enumerate(cities):
-        if i == num_cities - 1:
-            print(city)
-        else:
-            print(city, end=", ")
+    print(', '.join(city[0] for city in cities))
     cur.close()
     conn.close()
