@@ -19,7 +19,7 @@ if __name__ == "__main__":
                            pool_pre_ping=True)
     Session = sessionmaker(bind=engine)
     session = Session()
-    state = session.query(State).filter(State.name == stateName )\
+    state = session.query(State).filter(State.name == stateName)\
         .first()
     # print the results
     if state is None:
