@@ -14,5 +14,5 @@ import sys
 if __name__ == '__main__':
     url = sys.argv[1]
     with urllib.request.urlopen(url) as response:
-        XRequestId = response.getheader('X-Request-Id')
-        print(XRequestId)
+        XRequestId = response.info().get('X-Request-Id')
+        print("{}".format(XRequestId))
