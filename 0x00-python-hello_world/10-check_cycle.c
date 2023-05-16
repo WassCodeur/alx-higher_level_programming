@@ -13,7 +13,7 @@ int check_cycle(listint_t *list)
 
 	if (list->next == NULL)
 	{
-		return 0;
+		return (0);
 	}
 	t = list;
 	r = list->next;
@@ -21,10 +21,10 @@ int check_cycle(listint_t *list)
 	{
 		if (t == r)
 		{
-			return 1;
+			return (1);
 		}
 		t = list->next;
 		r = r->next->next;
 	}
-	return 0;
+	return (0);
 }
