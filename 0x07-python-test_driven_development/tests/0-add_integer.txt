@@ -1,19 +1,44 @@
-Test 0-add_integer.py
+Test 0-add-integer.py
 ---------------------
 
+>>> add_integer = __import__('0-add_integer').add_integer
+
+Positives nunber
+----------------
 >>> add_integer(1, 2)
 3
->>> add_integer(100, 200)
-300
->>> add_integer(1.5, 2.5)
-4
->>> add_integer(1.5, 2)
+>>> add_integer(10)
+108
 
-When 2 arguments positives/negatives int/float
------------------------------------------------
->>> add_integer(1, -2)
--1
->>> add_integer(-1, 2)
-1
->>> add_integer(-1, -2)
--3
+Negatives numbers
+-----------------
+
+>>> add_integer(-12, 12)
+0
+>>> add_integer(5, -2)
+3
+>>> add_integer(-12,-12)
+-24
+>>> add_integer(-100)
+-2
+
+if a or b is a float
+--------------------
+add_integer(3.1, 4.3)
+7
+ add_integer(-3.1, 5.0)
+2
+ add_integer(-1.1)
+97
+
+if a or b is not an integer or a float
+--------------------------
+>>> add_integer(-100, "wass")
+Traceback (most recent call last):
+  ...
+TypeError: b must be an integer
+
+>>> add_integer(None)
+Traceback (most recent call last):
+   ...
+TypeError: a must be an integer
