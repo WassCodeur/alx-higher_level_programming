@@ -8,6 +8,6 @@ if (process.argv.length < 3) {
     if (err) {
       console.error(url);
     }
-    console.log('code: ', res.statusCode);
+    console.log(`code: ${res.statusCode}`);
   });
 }
