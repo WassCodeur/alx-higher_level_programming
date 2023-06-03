@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-""" 4-hidden_discovery.py """
-import hidden_4
-if __name__ == "__main__":
-    print("\n".join([name for name in dir(hidden_4) if name[0] != "_"]))
+if __name__ == '__main__':
+    import hidden_4
+    names = dir(hidden_4)
+    for name in names:
+        if name[0] != '_':
+            print(name)

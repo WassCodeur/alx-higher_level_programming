@@ -1,9 +1,12 @@
 #!/usr/bin/python3
-import sys
-def main(args):
-    j = 0
-    for i in range(1, len(args)):
-        j = j + int(args[i])
-    print("{}".format(j))
-if __name__ == "__main__":
-    main(sys.argv)
+def infinity(args):
+    sum = 0
+    argc = len(args)
+    for i in range(1, argc):
+        sum += int(args[i])
+    print(sum)
+
+
+if __name__ == '__main__':
+    from sys import argv
+    infinity(argv)
