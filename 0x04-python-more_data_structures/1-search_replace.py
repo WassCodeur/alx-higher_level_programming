@@ -1,8 +1,7 @@
 #!/usr/bin/python3
 def search_replace(my_list, search, replace):
-    new_list = []
-    for i in my_list:
-        if i == 2:
-            i = replace
-        new_list.append(i)
-    return new_list
+    new_list = list(map(lambda x: x, my_list))
+    for i in range(len(new_list)):
+        if new_list[i] == 2:
+            new_list[i] = replace
+    return (list(new_list))
