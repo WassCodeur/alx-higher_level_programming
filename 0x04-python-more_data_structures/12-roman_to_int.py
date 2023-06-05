@@ -1,19 +1,18 @@
 #!/usr/bin/python3
 def roman_to_int(roman_string):
-    if isinstance(roman_string, str) is False:
+    r_num = {"I": 1, "V": 5, "X": 10, "L": 50, "C": 100, "D": 500, "M": 1000}
+    roman_list = list(roman_string)
+    number = 0
+    prev_value = 0
+    if roman_string is None or type(roman_string) is not str:
         return 0
     else:
-        Number = 0
-        RomanNumber = {"I": 1,"V": 5, "X": 10, "L": 50, "C": 100, "D": 500, "M": 1000}
-        for i in range(len(roman_string)):
-            valueTemp = RomanNumber[roman_string[i]]
-            if i == (len(roman_string) - 1):
-                Number += valueTemp
+        for i in reversed(roman_list):
+            current_value = r_num[i]
+            if prev_value > current_value:
+                number -= int(current_value)
             else:
-                if RomanNumber[roman_string[i + 1]] > valueTemp:
-                    Number =  Number - valueTemp
-                else:
-                    Number =  Number + valueTemp
-                
+                number += int(current_value)
+            prev_value = current_value
 
-    return Number
+        return number
