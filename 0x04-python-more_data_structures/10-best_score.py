@@ -2,7 +2,7 @@
 def best_score(a_dictionary):
     best_score = 0
     best_person_name = ""
-    if a_dictionary == None:
+    if a_dictionary is None:
         return None
     elif not a_dictionary:
         return None
