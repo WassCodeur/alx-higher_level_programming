@@ -14,3 +14,7 @@ try:
     print(my_square.__size)
 except Exception as e:
     print(e)
+try:
+    print(my_square._size)
+except Exception as e:
+    print(e)
