@@ -9,8 +9,19 @@ class Rectangle:
 
     def __init__(self, width=0, height=0):
         """initialize a class instance"""
-        self.__width = width
-        self.__height = height
+        if not isinstance(width, int):
+            raise TypeError("width must be an integer")
+        elif width < 0:
+            raise ValueError("width must be >= 0")
+        else:
+            self.__width = width
+
+        if not isinstance(height, int):
+            raise TypeError("height must be an integer")
+        elif height < 0:
+            raise ValueError("height must be >= 0")
+        else:
+            self.__height = height
         Rectangle.number_of_instances += 1
 
     @property
@@ -21,7 +32,7 @@ class Rectangle:
     @width.setter
     def width(self, value):
         """instance attribute to set width"""
-        if type(value) is not int:
+        if not isinstance(value, int):
             raise TypeError("width must be an integer")
         elif value < 0:
             raise ValueError("width must be >= 0")
@@ -35,7 +46,7 @@ class Rectangle:
     @height.setter
     def height(self, value):
         """instance attribute to set height"""
-        if type(value) is not int:
+        if not isinstance(value, int):
             raise TypeError("height must be an integer")
         elif value < 0:
             raise ValueError("height must be >= 0")
