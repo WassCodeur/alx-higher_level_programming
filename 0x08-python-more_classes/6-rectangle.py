@@ -64,7 +64,7 @@ class Rectangle:
                 rectangle += "#"
             if i < (self.__height - 1):
                 rectangle += '\n'
-        return(rectangle)
+        return (rectangle)
 
     def __repr__(self):
         """string representation of the rectangle"""
